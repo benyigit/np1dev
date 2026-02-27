@@ -1,0 +1,110 @@
+.np-sidebar {
+    position: fixed;
+    top: var(--navbar-height);
+    left: 0;
+    bottom: 0;
+    width: var(--sidebar-width);
+    background: var(--bg-secondary);
+    border-right: 1px solid var(--border-color);
+    overflow-y: auto;
+    z-index: 50;
+    transition: background var(--transition), border-color var(--transition);
+}
+
+.np-sidebar-inner {
+    padding: 20px 12px;
+}
+
+.np-sidebar-all {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 14px;
+    margin-bottom: 16px;
+    border-radius: var(--radius-sm);
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    transition: all var(--transition);
+}
+
+.np-sidebar-all:hover {
+    color: var(--text-primary);
+    background: var(--bg-tertiary);
+}
+
+.np-sidebar-all.active {
+    color: var(--accent);
+    background: var(--accent-glow);
+}
+
+.np-sidebar-category {
+    margin-bottom: 24px;
+}
+
+.np-sidebar-cat-title {
+    padding: 0 14px;
+    margin-bottom: 6px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--text-tertiary);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.np-sidebar-items {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+}
+
+.np-sidebar-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 14px;
+    border-radius: var(--radius-sm);
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    transition: all var(--transition);
+    border-left: 2px solid transparent;
+}
+
+.np-sidebar-item:hover {
+    color: var(--text-primary);
+    background: var(--bg-tertiary);
+}
+
+.np-sidebar-item.active {
+    color: var(--accent);
+    background: var(--accent-glow);
+    border-left-color: var(--accent);
+    font-weight: 500;
+}
+
+.np-badge-new {
+    font-size: 0.6rem;
+    font-weight: 700;
+    background: var(--accent);
+    color: #fff;
+    padding: 1px 6px;
+    border-radius: 999px;
+    text-transform: uppercase;
+}
+
+.np-badge-updated {
+    font-size: 0.6rem;
+    font-weight: 700;
+    background: var(--bg-tertiary);
+    color: var(--text-tertiary);
+    border: 1px solid var(--border-color);
+    padding: 1px 6px;
+    border-radius: 999px;
+    text-transform: uppercase;
+}
+
+@media (max-width: 900px) {
+    .np-sidebar {
+        display: none;
+    }
+}

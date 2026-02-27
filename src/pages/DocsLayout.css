@@ -1,0 +1,21 @@
+.np-docs-layout {
+    display: flex;
+    min-height: 100vh;
+    padding-top: var(--navbar-height);
+}
+
+.np-docs-content {
+    flex: 1;
+    margin-left: var(--sidebar-width);
+    padding: 40px 60px;
+    max-width: calc(100% - var(--sidebar-width));
+    min-width: 0;
+}
+
+@media (max-width: 900px) {
+    .np-docs-content {
+        margin-left: 0;
+        max-width: 100%;
+        padding: 24px 20px;
+    }
+}

@@ -1,0 +1,150 @@
+.np-index {
+    padding: 0;
+}
+
+.np-index-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 32px;
+}
+
+.np-index-title {
+    font-size: 2.5rem;
+    font-weight: 900;
+    letter-spacing: -1px;
+}
+
+.np-index-controls {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.np-index-search {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background: var(--bg-input);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    color: var(--text-tertiary);
+}
+
+.np-index-search input {
+    background: none;
+    border: none;
+    outline: none;
+    color: var(--text-primary);
+    font-size: 0.875rem;
+    font-family: var(--font-sans);
+    width: 140px;
+}
+
+.np-index-search input::placeholder {
+    color: var(--text-tertiary);
+}
+
+.np-index-filter {
+    padding: 9px 16px;
+    background: var(--bg-input);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    color: var(--text-primary);
+    font-size: 0.875rem;
+    font-family: var(--font-sans);
+    cursor: pointer;
+    appearance: auto;
+}
+
+.np-index-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.np-index-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    transition: all 0.3s ease;
+    animation: fadeInUp 0.4s ease both;
+    text-decoration: none;
+    color: inherit;
+}
+
+.np-index-card:hover {
+    border-color: rgba(255, 107, 0, 0.3);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px var(--accent-glow);
+}
+
+.np-index-card-preview {
+    height: 200px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-tertiary);
+}
+
+.np-index-card-preview>div {
+    width: 100% !important;
+    height: 100% !important;
+    border-radius: 0 !important;
+}
+
+.np-index-card-info {
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.np-index-card-name {
+    font-weight: 700;
+    font-size: 0.95rem;
+}
+
+.np-index-card-cat {
+    font-size: 0.7rem;
+    color: var(--text-tertiary);
+    background: var(--bg-tertiary);
+    padding: 3px 10px;
+    border-radius: 999px;
+}
+
+.np-index-empty {
+    text-align: center;
+    padding: 80px 20px;
+    color: var(--text-tertiary);
+    font-size: 1rem;
+}
+
+@media (max-width: 640px) {
+    .np-index-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .np-index-controls {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .np-index-search {
+        width: 100%;
+    }
+
+    .np-index-search input {
+        width: 100%;
+    }
+
+    .np-index-filter {
+        width: 100%;
+    }
+}
